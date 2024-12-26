@@ -1,40 +1,33 @@
 package com.example;
 
-import java.time.Duration;
-import java.util.List;
 
+import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class JSexecutor {
-    WebDriver driver;
+public class JSexecutor extends Base {
     JavascriptExecutor js;
 
-    @Test
-    public void launch(){
-        driver = WebDriverManager.chromedriver().create();
-        driver = new ChromeDriver();
-        driver.get("https://practicetestautomation.com/practice-test-login");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+    @BeforeTest
+    public void launch1(){
+        initializeDriver();
         js = (JavascriptExecutor)driver;
     }
 
     @Test
-    public void login() throws InterruptedException{
+    public void login1() throws InterruptedException{
         driver.findElement(By.id("username")).sendKeys("student");
         driver.findElement(By.id("password")).sendKeys("Password123");
         driver.findElement(By.id("submit")).click();
         Thread.sleep(1000);
     }
 
-    @Test (dependsOnMethods = "login")
+    @Test (dependsOnMethods = "login1")
     public void courses() throws InterruptedException{
         driver.findElement(By.xpath("//a[text()='Courses']")).click();
         js.executeScript("window.scrollBy(0, 1000)");
@@ -50,8 +43,12 @@ public class JSexecutor {
         for(WebElement al : aLinks){
             System.out.println(al.getText());
             System.out.println(al.getAttribute("href"));
-            System.out.println(al.getAttribute("value"));
             System.out.println("==============================");
         }
+    }
+
+    @AfterTest
+    public void closeTest1(){
+        tearDown();
     }
 }
