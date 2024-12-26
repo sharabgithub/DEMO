@@ -1,33 +1,30 @@
 package com.example;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+public class Firstsel extends Base{
 
-public class Firstsel {
-    WebDriver dr;
-
-    @Test
+    @BeforeTest
     public void launchApp(){
-        dr = WebDriverManager.chromedriver().create();
-        dr = new ChromeDriver();
-        dr.get("https://practicetestautomation.com/practice-test-login/");
-        dr.manage().window().maximize();
-        dr.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-
+       initializeDriver();
     }
 
     @Test
     public void login() throws InterruptedException{
-        dr.findElement(By.name("username")).sendKeys("student");
-        dr.findElement(By.name("password")).sendKeys("Password123");
-        dr.findElement(By.id("submit")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.name("username")).sendKeys("student");
+        driver.findElement(By.name("password")).sendKeys("Password123");
+        driver.findElement(By.id("submit")).click();
         Thread.sleep(2000);
+        System.out.println("This is login in First Test Class");
+    }
+
+    @AfterTest
+    public void closeTest(){
+        tearDown();
     }
     
 }
