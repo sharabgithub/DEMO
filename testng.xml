@@ -1,0 +1,8 @@
+<suite name="softwaretestingmaterial">
+	<test name="testngTest">
+		<classes>
+			<class name="com.example.Firstsel" />
+			<class name="com.example.JSexecutor" />
+		</classes>
+	</test>
+</suite>

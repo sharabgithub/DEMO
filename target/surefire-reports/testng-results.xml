@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-12-25T17:21:00 IST" name="softwaretestingmaterial" finished-at="2024-12-25T17:21:22 IST" duration-ms="22215">
+    <groups>
+    </groups>
+    <test started-at="2024-12-25T17:21:00 IST" name="testngTest" finished-at="2024-12-25T17:21:22 IST" duration-ms="22215">
+      <class name="com.example.JSexecutor">
+        <test-method signature="launch()[pri:0, instance:com.example.JSexecutor@4206a205]" started-at="2024-12-25T17:21:09 IST" name="launch" finished-at="2024-12-25T17:21:15 IST" duration-ms="5427" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method signature="login()[pri:0, instance:com.example.JSexecutor@4206a205]" started-at="2024-12-25T17:21:15 IST" name="login" finished-at="2024-12-25T17:21:17 IST" duration-ms="2289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="printLinks()[pri:0, instance:com.example.JSexecutor@4206a205]" started-at="2024-12-25T17:21:17 IST" name="printLinks" finished-at="2024-12-25T17:21:17 IST" duration-ms="406" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- printLinks -->
+        <test-method signature="courses()[pri:0, instance:com.example.JSexecutor@4206a205]" started-at="2024-12-25T17:21:17 IST" name="courses" finished-at="2024-12-25T17:21:22 IST" depends-on-methods="com.example.JSexecutor.login" duration-ms="4985" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- courses -->
+      </class> <!-- com.example.JSexecutor -->
+      <class name="com.example.Firstsel">
+        <test-method signature="launchApp()[pri:0, instance:com.example.Firstsel@6279cee3]" started-at="2024-12-25T17:21:00 IST" name="launchApp" finished-at="2024-12-25T17:21:06 IST" duration-ms="5955" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="login()[pri:0, instance:com.example.Firstsel@6279cee3]" started-at="2024-12-25T17:21:06 IST" name="login" finished-at="2024-12-25T17:21:09 IST" duration-ms="3122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- com.example.Firstsel -->
+    </test> <!-- testngTest -->
+  </suite> <!-- softwaretestingmaterial -->
+</testng-results>
