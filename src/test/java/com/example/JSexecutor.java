@@ -9,7 +9,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-
+//This is Github update - need to add, commit and push later merge from github repo to master
 public class JSexecutor extends Base {
     JavascriptExecutor js;
 
