@@ -1,5 +1,5 @@
 <suite name="softwaretestingmaterial">
-	<test name = "Parallel Tests">
+	<test name = "Parallel Tests - 17092026">
 		<classes>
 			<!--<class name="com.example.Firstsel.SPK" />-->
 			<class name="com.example.JSexecutor" />
